@@ -1,0 +1,9 @@
+{
+    "dbt.deferConfigPerProject": {
+        "dbt_tutorial": {
+            "deferToProduction": true
+        }
+    },
+    "dbt.perspectiveTheme": "Pro Dark",
+    "dbt.enableNewLineagePanel": true
+}
