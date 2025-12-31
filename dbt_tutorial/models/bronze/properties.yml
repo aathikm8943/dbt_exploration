@@ -12,12 +12,26 @@ models:
       schema: bronze
       materialized: view
     description: "This table contains the raw product dimension data ingested from the source system."
+    columns:
+      - name: product_sk
+        data_tests:
+          - not_null
+          - unique
+
+      - name: department
+        data_tests:
+          - accepted_values:
+              values: ['Grocery', 'Electronics', 'Toys', 'Home', 'Health & Beauty']
 
   - name: bronze_dim_store
     config:
       schema: bronze
       materialized: view  
     description: "This view contains the raw store dimension data ingested from the source system."
+    columns:
+      - name: store_sk
+        data_tests:
+          - default_non_zero_test
 
   - name: bronze_fact_sales
     config:
@@ -36,3 +50,4 @@ models:
       schema: bronze
       materialized: view
     description: "This table contains the raw returns fact data ingested from the source system."
+    

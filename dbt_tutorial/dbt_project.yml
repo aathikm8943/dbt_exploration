@@ -34,4 +34,7 @@ models:
     gold:
       +materialized: view
 
-      
+# Configuring seeds
+seeds:
+  dbt_tutorial:
+    +schema: bronze
