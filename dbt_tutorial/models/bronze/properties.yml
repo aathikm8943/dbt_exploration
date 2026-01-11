@@ -21,7 +21,8 @@ models:
       - name: department
         data_tests:
           - accepted_values:
-              values: ['Grocery', 'Electronics', 'Toys', 'Home', 'Health & Beauty']
+              arguments:
+                values: ['Grocery', 'Electronics', 'Toys', 'Home', 'Health & Beauty']
 
   - name: bronze_dim_store
     config:
