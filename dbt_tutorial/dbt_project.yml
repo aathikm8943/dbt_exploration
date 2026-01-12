@@ -28,13 +28,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_tutorial:
     bronze:
-      schema: bronze
       +materialized: view
     silver:
-      schema: silver
       +materialized: view
     gold:
-      schema: gold
       +materialized: view
 
 # Configuring seeds

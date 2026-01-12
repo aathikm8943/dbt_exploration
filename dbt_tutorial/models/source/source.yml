@@ -11,4 +11,7 @@ sources:
       - name: dim_date 
       - name: dim_product
       - name: dim_store
+  - name: bronze_source
+    schema: bronze
+    tables:
       - name: items
